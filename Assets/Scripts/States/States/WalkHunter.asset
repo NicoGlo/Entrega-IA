@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d27a3e193142046bda1b29c0d9beaf, type: 3}
+  m_Name: WalkHunter
+  m_EditorClassIdentifier: 
+  action:
+  - {fileID: 11400000, guid: 1ed9e6fee3bea78428a4ea844d6a6acc, type: 2}
+  nextState:
+  - {fileID: 11400000, guid: e256d5a1a3902334b847750def453488, type: 2}
+  home: {x: 380.42813, y: 1.61, z: 330.29718}
