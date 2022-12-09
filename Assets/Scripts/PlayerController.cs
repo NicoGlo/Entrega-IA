@@ -36,4 +36,40 @@ public class PlayerController : MonoBehaviour
             //codigo para el cambio de la escena si le das a la tecla "Escape"//
         }
     }
+
+    void Save()
+    {
+        JSONObject playerJson = new JSONObject();
+        JSONArray position = new JSONArray();
+        position.Add(transform.position.x);
+        position.Add(transform.position.y);
+        position.Add(transform.position.z);
+        playerJson.Add("Position", position);
+        JSONArray rotation = new JSONArray();
+        position.Add(transform.rotation.x);
+        position.Add(transform.rotation.y);
+        position.Add(transform.rotation.z);
+        playerJson.Add("Rotation", rotation);
+
+        string path = Application.persistentDataPath + "/save.json";
+        File.WriteAllText(path, playerJson.ToString());
+    }
+
+    void Load()
+    {
+        string path = Application.persistentDataPath + "/save.json";
+        string jsonString = File.ReadAllText(path);
+        JSONObject playerJson = (JSONObject)JSON.Parse(jsonString);
+        Debug.Log(playerJson["Position"].AsArray[0]);
+        transform.position = new Vector3(
+            playerJson["Position"].AsArray[0],
+            playerJson["Position"].AsArray[1],
+            playerJson["Position"].AsArray[2]
+            );
+    }
+
+    void OnDisable()
+    {
+        Save();
+    }
 }

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3908014ddaaa51d4aaddd4c83cc11af5, type: 3}
+  m_Name: Patrol
+  m_EditorClassIdentifier: 
+  action: []
+  nextState:
+  - {fileID: 11400000, guid: df7094a09e565384584a1e6867219a29, type: 2}
+  text: {fileID: 0}
+  stateMachine: {fileID: 0}
+  WayPoints:
+  - {x: 450.1, y: 8.9, z: 685.8}
+  - {x: 575.5, y: 18.688278, z: 610.9}
+  - {x: 522.2, y: 18.688278, z: 461}
+  - {x: 159.93242, y: 226.09648, z: 780.24866}

@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class StateMachine : MonoBehaviour
 {
-
+    public static StateMachine Instance;
     public State startingState;
     public State currentState;
+    public
     void Start()
     {
         currentState = startingState;
@@ -14,6 +16,7 @@ public class StateMachine : MonoBehaviour
 
     void Update()
     {
+        this.name = "(S)" + currentState;
         RunStateMachine();
     }
 
@@ -32,8 +35,10 @@ public class StateMachine : MonoBehaviour
         }
     }
 
+
     private void SwitchToNextState(State next)
     {
         currentState = next;
     }
+
 }
